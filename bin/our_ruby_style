@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'our_ruby_style/cli'
+
+OurRubyStyle::CLI.start

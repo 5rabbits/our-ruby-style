@@ -1,0 +1,12 @@
+PreCommit:
+  RuboCop:
+    enabled: true
+  Fasterer:
+    enabled: true
+  Reek:
+    enabled: true
+  <% if @include_rails %>
+  RailsBestPractices:
+    enabled: true
+  <% end %>
+
