@@ -1,8 +1,16 @@
 # OurRubyStyle
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/our_ruby_style`. To experiment with that code, run `bin/console` for an interactive prompt.
+Shared Ruby and Rails code style for Lemontech products.
 
-TODO: Delete this and the text above, and describe your gem
+This gem installs 4 configuration files for tools that will make your code great again.
+
+  * [rubocop](http://rubocop.readthedocs.io/en/latest/): is a Ruby static code analyzer. Out of the box it will enforce many of the guidelines outlined in the community [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide).
+
+  * [reek](https://github.com/troessner/reek): Code smell detector for Ruby. [Code Smells](https://github.com/troessner/reek/blob/master/docs/Code-Smells.md)
+
+  * [fasterer](https://github.com/DamirSvrtan/fasterer): Make your Rubies go faster. Inspired by [this talk](https://speakerdeck.com/sferik/writing-fast-ruby)
+
+  * [rails_best_practices](https://rails-bestpractices.com/): A code metric tool for rails projects.
 
 ## Installation
 
@@ -11,9 +19,6 @@ Add this line to your application's Gemfile:
 ```ruby
 gem 'our_ruby_style'
 ```
-
-gem install overcommit
-overcommit --install
 
 And then execute:
 
@@ -25,17 +30,59 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+* Execute:
 
-## Development
+  ```
+  $ our_ruby_style install
+  ```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+* Run each to check the entire project:
+  ```
+  $ rubocop
+  $ reek
+  $ fasterer
+  $ rails_best_practices
+  ```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+## Integrations
+
+### Git
+
+You can use [`Overcommit`](https://github.com/brigade/overcommit) to lint the changed files before commiting. Example:
+
+```YML
+PreCommit:
+  RuboCop:
+    enabled: true
+    problem_on_unmodified_line: ignore
+  Fasterer:
+    enabled: true
+    problem_on_unmodified_line: ignore
+  Reek:
+    enabled: true
+    problem_on_unmodified_line: ignore
+  RailsBestPractices:
+    enabled: true
+    problem_on_unmodified_line: ignore
+```
+
+You need install Overcommit
+
+```ruby
+gem 'our_ruby_style'
+```
+
+And then execute:
+
+```
+$ overcommit install
+```
+
+If the changes causes lint errors the commit will fail until you fix them.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/a-bx/our_ruby_style.
+Bug reports and pull requests are welcome on GitHub at https://github.com/5rabbits/our_ruby_style.
 
 ## License
 
