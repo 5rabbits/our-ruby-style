@@ -12,6 +12,9 @@ Add this line to your application's Gemfile:
 gem 'our_ruby_style'
 ```
 
+gem install overcommit
+overcommit --install
+
 And then execute:
 
     $ bundle
