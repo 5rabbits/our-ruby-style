@@ -36,7 +36,7 @@ Or install it yourself as:
   $ our_ruby_style install
   ```
 
-* Run each to check the entire project:
+* Run each tool to check the entire project:
   ```
   $ rubocop
   $ reek
@@ -69,7 +69,7 @@ PreCommit:
 You need install Overcommit
 
 ```ruby
-gem 'our_ruby_style'
+gem 'overcommit'
 ```
 
 And then execute:
