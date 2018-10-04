@@ -1,4 +1,6 @@
 ---
+NestedIterators:
+  max_allowed_nesting: 2
 "app/controllers/":
   IrresponsibleModule:
     enabled: false

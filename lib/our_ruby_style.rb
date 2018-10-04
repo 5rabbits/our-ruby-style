@@ -4,7 +4,6 @@ require 'rails/generators'
 # Our Ruby Style Gem
 # Our config files for code style tools:
 #   * rubocop
-#   * rails_best_practices
 #   * fasterer
 #   * reek
 module OurRubyStyle

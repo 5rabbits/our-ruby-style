@@ -22,3 +22,9 @@ ClassLength:
 # the value of the configuration parameter MaxSlashes
 RegexpLiteral:
   Enabled: false
+
+BlockLength:
+  Enabled: false
+
+Style/EndOfLine:
+  EnforcedStyle: lf

@@ -10,8 +10,6 @@ This gem installs 4 configuration files for tools that will make your code great
 
   * [fasterer](https://github.com/DamirSvrtan/fasterer): Make your Rubies go faster. Inspired by [this talk](https://speakerdeck.com/sferik/writing-fast-ruby)
 
-  * [rails_best_practices](https://rails-bestpractices.com/): A code metric tool for rails projects.
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -41,7 +39,6 @@ Or install it yourself as:
   $ rubocop
   $ reek
   $ fasterer
-  $ rails_best_practices
   ```
 
 ## Integrations
