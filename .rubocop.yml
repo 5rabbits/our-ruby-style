@@ -22,3 +22,7 @@ ClassLength:
 # the value of the configuration parameter MaxSlashes
 RegexpLiteral:
   Enabled: false
+
+# Cannot build raw query strings.
+Style/FrozenStringLiteralComment:
+  Enabled: false
