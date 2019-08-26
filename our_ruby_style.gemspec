@@ -27,6 +27,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'fasterer', '0.4.1'
   spec.add_runtime_dependency 'rails', '~> 5.0'
   spec.add_runtime_dependency 'reek', '~> 4.8.1'
-  spec.add_runtime_dependency 'rubocop', '~> 0.68.0'
+  spec.add_runtime_dependency 'rubocop', '~> 0.59.2'
   spec.add_runtime_dependency 'thor', '~> 0.20'
 end
