@@ -1,12 +1,12 @@
 AllCops:
-  TargetRubyVersion: 2.2
+  TargetRubyVersion: 2.6
   Exclude:
     - bin/*
     - Rakefile
-    - test/*.rb
+    - test/**/*.rb
     - config/**/*.rb
     - db/**/*.rb
-LineLength:
+Metrics/LineLength:
   Max: 80
 
 # The ABC size is based on assignments, branches (method calls), and conditions
@@ -14,11 +14,21 @@ Metrics/AbcSize:
   Max: 20
 
 # Maximum number of lines that a class can contain; 200 for us
-ClassLength:
+Metrics/ClassLength:
   CountComments: false
   Max: 200
 
 # How many escaped slashes there are in a regex and on
 # the value of the configuration parameter MaxSlashes
-RegexpLiteral:
+Style/RegexpLiteral:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Layout/EndOfLine:
+  EnforcedStyle: lf
+
+# Cannot build raw query strings.
+Style/FrozenStringLiteralComment:
   Enabled: false
